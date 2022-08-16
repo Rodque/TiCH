@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
+::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+    /*display: none;*/
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CC3C3C;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #263238;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FF4C4C; 
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -80,7 +100,7 @@ header.sticky ul li a {
     background: url(pexels.jpg);
     background-size: cover;
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
 }
 
@@ -90,6 +110,7 @@ header.sticky ul li a {
     text-transform: uppercase;
     text-align: left;
     line-height: 1em;
+    margin: -150px 50px 50px 50px;
 }
 
 .banner h2 span {
@@ -310,7 +331,10 @@ p {
 }
 
 .contact {
-    background: #000;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #9279cf 0%, #07889a 90% );
+    border-radius: 100px;
+    min-height: 80vh;
+    margin: 20px;
 }
 
 .contact h3,
@@ -379,10 +403,6 @@ p {
     font-weight: 500;
 }
 
-.toggle {
-    /*display: none;*/
-}
-
 @media (max-width: 992px) {
     .toggle {
         display: block;
@@ -441,8 +461,8 @@ p {
 
     header.active ul li a {
         display: inline-block;
-        margin: 5px 0;
-        font-size: 20px;
+        margin: 20px 0;
+        font-size: 30px;
     }
 
     header .logo,
@@ -483,5 +503,9 @@ p {
 
     h3 {
         font-size: 36px;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
     }
 }
