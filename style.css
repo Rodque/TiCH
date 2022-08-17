@@ -54,17 +54,6 @@ header.sticky {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
-/*header .logo {
-    position: relative;
-    font-weight: 700;
-    color: #FFF;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.6s;
-}*/
-
 header .logo img {
     width: 80px;
     height: auto;
@@ -105,7 +94,7 @@ header.sticky ul li a {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url(pexels.jpg);
+    background: url(images/pexels.jpg);
     background-size: cover;
     display: flex;
     /*justify-content: center;*/
@@ -338,11 +327,23 @@ p {
     font-weight: 300;
 }
 
+.contentForm {
+    position: relative;
+    text-align: center;
+    width: 1000px;
+}
+
 .contact {
     background-image: radial-gradient( circle farthest-corner at 10% 20%, #9279cf 0%, #07889a 90% );
-    border-radius: 100px;
+    border-radius: 50px;
     min-height: 80vh;
     margin: 20px;
+}
+
+.contactForm {
+    position: relative;
+    display: grid;
+
 }
 
 .contact h3,
@@ -350,65 +351,71 @@ p {
     color: #FFF;
 }
 
-.contactForm {
+.formBox {
     position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-}
-
-.contactForm form {
     width: 100%;
 }
 
-.contactForm .row100 {
+.formBox .row50 {
     display: flex;
-    width: 100%;
+    gap: 20px;
 }
 
-.contactForm .row100 .inputBx50 {
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
     width: 50%;
-    margin: 0 20px;
 }
 
-.contactForm .row100 .inputBx100 {
+.formBox .row100 .inputBox {
     width: 100%;
-    margin: 0 20px;
 }
 
-.contactForm .row100 input,
-.contactForm .row100 textarea {
-    position: relative;
-    border: none;
-    border-bottom: 1px solid #FFF;
+.inputBox span {
     color: #FFF;
-    background: transparent;
-    width: 100%;
-    padding: 10px 0;
-    outline: none;
-    font-size: 18px;
-    font-weight: 300;
-    margin: 20px 0;
-    resize: none;
-}
-
-.contactForm .row100 textarea {
-    height: 100px;
-}
-
-.contactForm .row100 input::placeholder,
-.contactForm .row100 textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5 )
-}
-
-.contactForm .row100 input[type="submit"] {
-    background: #FFF;
-    color: #000;
-    max-width: 100px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 5px;
     font-weight: 500;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.inputBox input {
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #FFF;
+    background: #FFFFFF40;
+    border-radius: 10px;
+}
+
+.inputBox textarea {
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #FFF;
+    resize: none;
+    min-height: 220px;
+    margin-bottom: 10px;
+    background: #FFFFFF40;
+    border-radius: 10px;
+}
+
+.inputBox input[type="submit"] {
+    background: #FF578B;
+    color: #FFF;
+    border: none;
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 15px;
+    border-radius: 10px;
+}
+
+.inputBox ::placeholder {
+    color: #999;
 }
 
 @media (max-width: 992px) {
@@ -498,21 +505,27 @@ p {
         padding-top: 350px;
     }
 
-    .row100 {
-        flex-direction: column;
-    }
-
-    .contactForm .row100 .inputBx50,
-    .contactForm .row100 .inputBx100 {
-        width: 100%;
-        margin: 0;
-    }
-
     h3 {
         font-size: 36px;
     }
 
     ::-webkit-scrollbar {
         display: none;
+    }
+}
+
+@media (max-width: 750px) {
+    .contactForm .row100 {
+        flex-direction: column;
+    }
+
+    .contactForm .row50 {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .contactForm .inputBox {
+        width: 100%;
     }
 }
