@@ -343,7 +343,6 @@ p {
 .contactForm {
     position: relative;
     display: grid;
-
 }
 
 .contact h3,
@@ -403,15 +402,19 @@ p {
 }
 
 .inputBox input[type="submit"] {
-    background: #FF578B;
+    background: #00C853;
     color: #FFF;
     border: none;
     font-size: 1.1em;
-    max-width: 120px;
+    width: 200px;
     font-weight: 500;
     cursor: pointer;
     padding: 14px 15px;
     border-radius: 10px;
+}
+
+.inputBox input:hover[type="submit"] {
+    background: #64DD17;
 }
 
 .inputBox ::placeholder {
