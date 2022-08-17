@@ -96,7 +96,6 @@ header ul li a {
     transition: 0.6s;
 }
 
-header.sticky .logo,
 header.sticky ul li a {
     color: #000;
 
@@ -474,7 +473,6 @@ p {
         font-size: 30px;
     }
 
-    header .logo,
     header ul li a {
         color:#000
     }
