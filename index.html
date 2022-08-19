@@ -12,14 +12,14 @@
             <div class="logo">
                 <img src="images/TiCh.png">
             </div>
-            <ul>
-                <li><a href="#home" onclick="toggle()">Home</a></li>
-                <li><a href="#about" onclick="toggle()">About</a></li>
-                <li><a href="#services" onclick="toggle()">Services</a></li>
-                <li><a href="#portfolio" onclick="toggle()">Portfolio</a></li>
-                <li><a href="#team" onclick="toggle()">Team</a></li>
-                <li><a href="#contact" onclick="toggle()">Contact</a></li>
-            </ul>
+                <ul>
+                    <li><a class="active" href="#home" onclick="toggle()">Home</a></li>
+                    <li><a href="#about" onclick="toggle()">About</a></li>
+                    <li><a href="#services" onclick="toggle()">Services</a></li>
+                    <li><a href="#portfolio" onclick="toggle()">Portfolio</a></li>
+                    <li><a href="#team" onclick="toggle()">Team</a></li>
+                    <li><a href="#contact" onclick="toggle()">Contact</a></li>
+                </ul>
             <div class="toggle" onclick="toggle()"></div>
         </header>
 
@@ -235,7 +235,6 @@
             </div>
         </section>
 
-
         <script type="text/javascript">
             window.addEventListener("scroll", function(){
                 var header = document.querySelector("header");
@@ -246,5 +245,27 @@
                 header.classList.toggle("active")
             }
         </script>
+
+        <script>
+            let section = document.querySelectorAll('section');
+            let navLinks = document.querySelectorAll('header ul a');
+
+            window.onscroll = () => {
+                section.forEach(sec =>{
+                    let top = window.scrollY;
+                    let offset = sec.offsetTop - 150;
+                    let height = sec.offsetHeight;
+                    let id = sec.getAttribute('id');
+
+                    if(top >= offset && top < offset + height){
+                        navLinks.forEach(links => {
+                            links.classList.remove('active');
+                            document.querySelector('header ul a[href*=' + id + ']').classList.add('active');
+                        });
+                    };
+                });
+            };
+        </script>
+
     </body>
 </html>

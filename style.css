@@ -87,7 +87,12 @@ header ul li a {
 
 header.sticky ul li a {
     color: #000;
+}
 
+header ul li a.active,
+header ul li a:hover {
+    color: #304FFE;
+    font-weight: bold;
 }
 
 .banner {
@@ -384,7 +389,7 @@ p {
     padding: 10px;
     font-size: 1.1em;
     outline: none;
-    border: 1px solid #FFF;
+    border: 0px solid #FFF;
     background: #FFFFFF40;
     border-radius: 10px;
 }
@@ -393,7 +398,7 @@ p {
     padding: 10px;
     font-size: 1.1em;
     outline: none;
-    border: 1px solid #FFF;
+    border: 0px solid #FFF;
     resize: none;
     min-height: 220px;
     margin-bottom: 10px;
